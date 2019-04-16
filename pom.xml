@@ -96,9 +96,11 @@
        
     <!-- heroku depedencies for main class -->
       <!--  -->
+
       <dependency>
       	<groupId>org.apache.tomcat</groupId>
       	<artifactId>tomcat-catalina</artifactId>
+      	<version>8.5.39</version>
       </dependency>
     </dependencies>
     
