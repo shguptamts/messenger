@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.shgup.ss.messenger.database.DatabaseClass;
+import org.shgup.ss.messenger.exception.DataNotFoundException;
 import org.shgup.ss.messenger.model.Message;
 
 public class MessageService {
@@ -49,7 +50,10 @@ public class MessageService {
 	
 	public Message getMessage(long id)
 	{
-		return messages.get(id);
+		Message message = messages.get(id);
+		if(message==null)
+			throw new DataNotFoundException("Message with message id "+ id+" not found");
+		return message;
 	}
 	
 	public Message addMessage(Message message)
