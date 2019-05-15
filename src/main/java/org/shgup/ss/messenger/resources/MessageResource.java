@@ -22,7 +22,7 @@ import org.shgup.ss.messenger.model.Message;
 import org.shgup.ss.messenger.service.MessageService;
 
 @Path("messages")
-@Produces(value= {MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+@Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class MessageResource {
 	
